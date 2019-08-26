@@ -1,0 +1,62 @@
+<ion-content padding class="animated fadeIn login auth-page">
+  <div class="login-content">
+
+    <!-- Logo -->
+    <div padding-horizontal text-center class="animated fadeInDown">
+      <div class="logo"></div>
+      <h2 ion-text class="text-primary">
+        <strong>Inscreva-se </strong>
+      </h2>
+      <h1 text-center>
+        <ion-icon name="done-all" color="primary" class="icon-7em"></ion-icon>
+      </h1>
+    </div>
+
+    <!-- Login form -->
+    <form class="list-form" novalidate [formGroup]="registerForm" (ngSubmit)="submitForm()">
+
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="md-contact" item-start class="text-primary"></ion-icon>
+          Nome
+        </ion-label>
+        <ion-input type="text" formControlName="name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+          Email
+        </ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+          Senha
+        </ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+          Reedigite sua senha
+        </ion-label>
+        <ion-input type="password" formControlName="confirmPassword"></ion-input>
+      </ion-item>
+      <br>
+      <div>
+        <button ion-button icon-start block color="dark" type="submit" ion-button [disabled]="registerForm.invalid">
+          <ion-icon name="sign-in"></ion-icon>
+          Criar Conta
+        </button>
+      </div>
+    </form>
+
+
+    <!-- Other links -->
+
+  </div>
+</ion-content>
