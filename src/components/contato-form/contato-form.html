@@ -18,12 +18,13 @@
           <ion-item>
             <ion-label position="floating"> Sexo</ion-label>
             <ion-select formControlName="sexo">
-              <ion-option value="Masculino" checked="true">Masculino</ion-option>
+              <ion-option value="Masculino">Masculino</ion-option>
               <ion-option value="Feminino">Feminino</ion-option>
               <ion-option value="Indefinido">Indefinido</ion-option>
             </ion-select>
           </ion-item>
           <br>
+          <h4>Dado da consulta do sus</h4>
           <ion-item>
             <ion-label position="floating">Posto de Sáude</ion-label>
             <ion-input type="text" placeholder="" formControlName="posto"></ion-input>
@@ -37,16 +38,14 @@
           <br>
           <br>
           <br>
-          <br>
-          <br>
         </ion-slide>
         <ion-slide>
           <br>
-          <h4>Area de Atendimento...</h4>
+          <h4>Agendamento para...</h4>
           <ion-item>
             <ion-label> Area de Atendimento</ion-label>
             <ion-select formControlName="area">
-              <ion-option value="Psicologia" checked="true">Psicologia</ion-option>
+              <ion-option value="Psicologia">Psicologia</ion-option>
               <ion-option value="Enfermagem">Enfermagem</ion-option>
               <ion-option value="Fisioterapia">Fisioterapia</ion-option>
               <ion-option value="Ortopedia">Ortopedia</ion-option>
@@ -57,10 +56,11 @@
             </ion-select>
           </ion-item>
           <br>
+          <h4>Situação Familiar</h4>
           <ion-item>
             <ion-label> Estado Civil</ion-label>
             <ion-select formControlName="estadocivil">
-              <ion-option value="Solteiro" checked="true">Solteiro(a)</ion-option>
+              <ion-option value="Solteiro">Solteiro(a)</ion-option>
               <ion-option value="Casado">Casado(a)</ion-option>
               <ion-option value="Viúvo">Viúvo(a)</ion-option>
               <ion-option value="Divorciado">Divorciado(a)</ion-option>
@@ -68,11 +68,10 @@
             </ion-select>
           </ion-item>
           <br>
-
           <ion-item>
             <ion-label> Com quem mora:</ion-label>
             <ion-select formControlName="quemmora">
-              <ion-option value="Sozinho" checked="true">Sozinho</ion-option>
+              <ion-option value="Sozinho">Sozinho</ion-option>
               <ion-option value="Filhos">Filhos</ion-option>
               <ion-option value="Cônjuge sem filhos">Cônjuge sem filhos</ion-option>
               <ion-option value="Pais/Responsáveis">Pais/Responsáveis</ion-option>
@@ -90,7 +89,7 @@
           <ion-item>
             <ion-label> Condições de Moradia</ion-label>
             <ion-select formControlName="moradia">
-              <ion-option value="Propria" checked="true">Própria</ion-option>
+              <ion-option value="Propria">Própria</ion-option>
               <ion-option value="Alugada">Alugada</ion-option>
               <ion-option value="Cedida">Cedida</ion-option>
             </ion-select>
@@ -99,16 +98,132 @@
         </ion-slide>
         <ion-slide>
           <br>
-          <h4>Somente mais alguns dados...</h4>
-          <ion-item>
-            <ion-label position="floating">Possui Saneamento?</ion-label>
-            <ion-input type="text" placeholder="" formControlName="saneamento"></ion-input>
-          </ion-item>
+          <h4>Saneamento...</h4>
+          <ion-list radio-group style="margin-bottom:10px;" formControlName="agua">
+            <ion-grid>
+              <ion-row>
+                <ion-col width-50>
+                  <ion-item>
+                    <ion-label>Água:</ion-label>
+                  </ion-item>
+                </ion-col>
+                <ion-col width-50>
+                  <ion-item>
+                    <ion-label>Sim</ion-label>
+                    <ion-radio value="Sim"></ion-radio>
+                  </ion-item>
+                </ion-col>
+                <ion-col width-50>
+                  <ion-item>
+                    <ion-label>Não</ion-label>
+                    <ion-radio value="Não"></ion-radio>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-list>
+          <ion-list radio-group style="margin-bottom:10px;" formControlName="luz">
+            <ion-grid>
+              <ion-row>
+                <ion-col width-50>
+                  <ion-item>
+                    <ion-label>Luz:</ion-label>
+                  </ion-item>
+                </ion-col>
+                <ion-col width-50>
+                  <ion-item>
+                    <ion-label>Sim</ion-label>
+                    <ion-radio value="Sim"></ion-radio>
+                  </ion-item>
+                </ion-col>
+                <ion-col width-50>
+                  <ion-item>
+                    <ion-label>Não</ion-label>
+                    <ion-radio value="Não"></ion-radio>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-list>
+          <ion-list radio-group style="margin-bottom:10px;" formControlName="esgoto">
+            <ion-grid>
+              <ion-row>
+                <ion-col width-50>
+                  <ion-item>
+                    <ion-label>Esgoto:</ion-label>
+                  </ion-item>
+                </ion-col>
+                <ion-col width-50>
+                  <ion-item>
+                    <ion-label>Sim</ion-label>
+                    <ion-radio value="Sim"></ion-radio>
+                  </ion-item>
+                </ion-col>
+                <ion-col width-50>
+                  <ion-item>
+                    <ion-label>Não</ion-label>
+                    <ion-radio value="Não"></ion-radio>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-list>
+          <ion-list radio-group style="margin-bottom:10px;" formControlName="pavimento">
+            <ion-grid>
+              <ion-row>
+                <ion-col width-50>
+                  <ion-item>
+                    <ion-label>Pavimento:</ion-label>
+                  </ion-item>
+                </ion-col>
+                <ion-col width-50>
+                  <ion-item>
+                    <ion-label>Sim</ion-label>
+                    <ion-radio value="Sim"></ion-radio>
+                  </ion-item>
+                </ion-col>
+                <ion-col width-50>
+                  <ion-item>
+                    <ion-label>Não</ion-label>
+                    <ion-radio value="Não"></ion-radio>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-list>
+          <ion-list radio-group style="margin-bottom:10px;" formControlName="lixo">
+            <ion-grid>
+              <ion-row>
+                <ion-col width-50>
+                  <ion-item>
+                    <ion-label>Lixo:</ion-label>
+                  </ion-item>
+                </ion-col>
+                <ion-col width-50>
+                  <ion-item>
+                    <ion-label>Sim</ion-label>
+                    <ion-radio value="Sim"></ion-radio>
+                  </ion-item>
+                </ion-col>
+                <ion-col width-50>
+                  <ion-item>
+                    <ion-label>Não</ion-label>
+                    <ion-radio value="Não"></ion-radio>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-list>
           <br>
+          <br>
+        </ion-slide>
+        <ion-slide>
+          <br>
+          <h4>Escolaridade</h4>
           <ion-item>
-            <ion-label>Escolaridade</ion-label>
+            <ion-label>Formação</ion-label>
             <ion-select formControlName="escolaridade">
-              <ion-option value="Analfabeto" checked="true">Analfabeto</ion-option>
+              <ion-option value="Analfabeto">Analfabeto</ion-option>
               <ion-option value="EM Completo">EM Completo</ion-option>
               <ion-option value="EF Incompleto">EF Incompleto</ion-option>
               <ion-option value="EF Completo">EF Completo</ion-option>
@@ -117,28 +232,123 @@
             </ion-select>
           </ion-item>
           <br>
+          <h4>Profissional</h4>
           <ion-item>
-            <ion-label position="floating">Situação Profissional</ion-label>
-            <ion-input type="text" placeholder="" formControlName="situacaoprofissional">
-            </ion-input>
+            <ion-label>Situação</ion-label>
+            <ion-select formControlName="situacaoprofissional">
+              <ion-option value="Empregado">Empregado</ion-option>
+              <ion-option value="Desempregado">EM Completo</ion-option>
+              <ion-option value="N.A">N.A</ion-option>
+            </ion-select>
           </ion-item>
           <br>
           <ion-item>
-            <ion-label position="floating">História Patológica</ion-label>
-            <ion-input type="text" placeholder="" formControlName="historiapatologica">
-            </ion-input>
+            <ion-label>Benefícios Previdenciários</ion-label>
+            <ion-select formControlName="beneficio">
+              <ion-option value="Não recebe">Não recebe</ion-option>
+              <ion-option value="Auxílio doença">Auxílio doença</ion-option>
+              <ion-option value="Aposentadoria">Aposentadoria</ion-option>
+              <ion-option value="Pensão por morte">Pensão por morte</ion-option>
+              <ion-option value="BPC">BPC</ion-option>
+              <ion-option value="Bolsa Familia">Bolsa Familia</ion-option>
+            </ion-select>
           </ion-item>
           <br>
+          <h4>História Patológica</h4>
+          <ion-item>
+            <ion-label>Tipo</ion-label>
+            <ion-select formControlName="historiapatologica">
+              <ion-option value="Pressão Alta">Pressão Alta</ion-option>
+              <ion-option value="Diabetes">Diabetes</ion-option>
+              <ion-option value="Colesterol">Colesterol</ion-option>
+              <ion-option value="Câncer">Câncer </ion-option>
+            </ion-select>
+          </ion-item>
           <br>
+        </ion-slide>
+        <ion-slide>
+          <br>
+          <h4>Hábitos</h4>
+          <ion-list radio-group style="margin-bottom:10px;" formControlName="alcool">
+            <ion-grid>
+              <ion-row>
+                <ion-col width-50>
+                  <ion-item>
+                    <ion-label>Alcool:</ion-label>
+                  </ion-item>
+                </ion-col>
+                <ion-col width-50>
+                  <ion-item>
+                    <ion-label>Sim</ion-label>
+                    <ion-radio value="Sim"></ion-radio>
+                  </ion-item>
+                </ion-col>
+                <ion-col width-50>
+                  <ion-item>
+                    <ion-label>Não</ion-label>
+                    <ion-radio value="Não"></ion-radio>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-list>
+          <ion-list radio-group style="margin-bottom:10px;" formControlName="cigarro">
+            <ion-grid>
+              <ion-row>
+                <ion-col width-50>
+                  <ion-item>
+                    <ion-label>Cigarro:</ion-label>
+                  </ion-item>
+                </ion-col>
 
+                <ion-col width-50>
+                  <ion-item>
+                    <ion-label>Sim</ion-label>
+                    <ion-radio value="Sim"></ion-radio>
+                  </ion-item>
+                </ion-col>
+
+                <ion-col width-50>
+                  <ion-item>
+                    <ion-label>Não</ion-label>
+                    <ion-radio value="Não"></ion-radio>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+            <ion-label>Medicamentos em uso:</ion-label>
+            <ion-item>
+              <ion-label position="floating"></ion-label>
+              <ion-textarea formControlName="medicamentos"></ion-textarea>
+            </ion-item>
+            <h4>Sugestão de encaminhamento</h4>
+            <ion-item>
+              <ion-label>Area</ion-label>
+              <ion-select formControlName="sugestaoencaminhamento">
+                <ion-option value="Enfermagem">Enfermagem</ion-option>
+                <ion-option value="Odontologia">Odontologia</ion-option>
+                <ion-option value="Farmácia">Farmácia</ion-option>
+                <ion-option value="Psicologia">Psicologia</ion-option>
+                <ion-option value="Fisioterapia">Fisioterapia</ion-option>
+                <ion-option value="Serviço Social">Serviço Social</ion-option>
+              </ion-select>
+            </ion-item>
+            <br>
+          </ion-list>
+        </ion-slide>
+        <ion-slide>
+          <br>
+          <ion-label>Motivo do encaminhamento:</ion-label>
+          <ion-item>
+            <ion-textarea maxLength="500" formControlName="motivoencaminhamento"></ion-textarea>
+          </ion-item>
+          <br><br>
           <button type="submit" ion-button block [disabled]="contatoForm.invalid">Salvar</button>
           <br>
           <br>
           <br>
-
         </ion-slide>
       </ion-slides>
     </ion-list>
-
   </form>
 </div>

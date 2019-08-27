@@ -34,15 +34,26 @@ export class ContatoFormComponent {
       sexo: [null, [Validators.required, Validators.minLength(5)]],
       posto: [null, [Validators.required, Validators.minLength(5)]],
       diagnostico: [null, [Validators.required, Validators.minLength(5)]],
-      area: [null, [Validators.required, Validators.minLength(5)]],
-      estadocivil: [null, [Validators.required, Validators.minLength(5)]],
+      area: [null, [Validators.required]],
+      estadocivil: [null, [Validators.required]],
       quemmora: [null, [Validators.required]],
       qtdpessoas: [null, [Validators.required]],
       moradia: [null, [Validators.required]],
-      saneamento: [null, [Validators.required]],
+      agua: [],
+      luz: [],
+      esgoto: [],
+      pavimento: [],
+      lixo: [],
       escolaridade: [null, [Validators.required, Validators.minLength(5)]],
       situacaoprofissional: [null, [Validators.required, Validators.minLength(5)]],
+      beneficio: [null, [Validators.required]],
       historiapatologica: [null, [Validators.required]],
+      alcool: [],
+      cigarro: [],
+      medicamentos: [null, [Validators.required, Validators.minLength(5)]],
+      sugestaoencaminhamento: [null, [Validators.required]],
+      motivoencaminhamento: [null, [Validators.required, Validators.minLength(5)]],
+
 
     })
   }
@@ -54,7 +65,7 @@ export class ContatoFormComponent {
 
         this.navCtrl.setRoot('start-page');
         this.presentAlert('', 'Dados inseridos com sucesso!');
-        console.log('Salvou');
+        console.log(this.contatoForm);
         this.contatoForm.reset();
       })
   }
