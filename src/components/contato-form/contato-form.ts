@@ -6,6 +6,7 @@ import { AngularFireDatabase } from '@angular/fire/database';
 import { NavController, AlertController } from 'ionic-angular';
 import { ViewChild } from '@angular/core';
 import { Slides } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 
 
 
@@ -23,6 +24,7 @@ import { Slides } from 'ionic-angular';
 })
 export class ContatoFormComponent {
 
+  uid: string;
   contatoForm: FormGroup;
 
   constructor(
@@ -31,7 +33,9 @@ export class ContatoFormComponent {
     public db: AngularFireDatabase,
     public navCtrl: NavController,
     public alertCtrl: AlertController,
+    public storage: Storage,
   ) {
+
     this.contatoForm = this.formbuilder.group({
       exercicio: [null, [Validators.required]],
       nome: [null, [Validators.required, Validators.minLength(5)]],
@@ -51,6 +55,8 @@ export class ContatoFormComponent {
       lixo: [null, [Validators.required]],
       escolaridade: [null, [Validators.required, Validators.minLength(5)]],
       situacaoprofissional: [null, [Validators.required, Validators.minLength(5)]],
+      profissao: [null, [Validators.required, Validators.minLength(5)]],
+      salario: [null, [Validators.required]],
       beneficio: [null, [Validators.required]],
       historiapatologica: [null, [Validators.required]],
       alcool: [null, [Validators.required]],
@@ -64,6 +70,10 @@ export class ContatoFormComponent {
 
 
   cadastraContato() {
+    this.storage.get('user')
+      .then((resolve) => {
+        this.uid = resolve;
+      })
     this.db.database.ref('/paciente').push(this.contatoForm.value)
       .then(() => {
 
@@ -82,5 +92,6 @@ export class ContatoFormComponent {
     });
     alert.present();
   }
+
 
 }

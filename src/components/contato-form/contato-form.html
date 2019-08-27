@@ -3,7 +3,6 @@
     <ion-list>
       <ion-slides pager>
         <ion-slide>
-          <br>
           <h4>Identificação do Paciente</h4>
           <ion-item>
             <ion-label position="floating">Nome</ion-label>
@@ -40,7 +39,6 @@
           <br>
         </ion-slide>
         <ion-slide>
-          <br>
           <h4>Agendamento para...</h4>
           <ion-item>
             <ion-label> Area de Atendimento</ion-label>
@@ -97,7 +95,6 @@
           <br>
         </ion-slide>
         <ion-slide>
-          <br>
           <h4>Saneamento...</h4>
           <ion-list radio-group style="margin-bottom:10px;" formControlName="agua">
             <ion-grid>
@@ -218,7 +215,6 @@
           <br>
         </ion-slide>
         <ion-slide>
-          <br>
           <h4>Escolaridade</h4>
           <ion-item>
             <ion-label>Formação</ion-label>
@@ -237,9 +233,20 @@
             <ion-label>Situação</ion-label>
             <ion-select formControlName="situacaoprofissional">
               <ion-option value="Empregado">Empregado</ion-option>
-              <ion-option value="Desempregado">EM Completo</ion-option>
+              <ion-option value="Desempregado">Desempregado</ion-option>
               <ion-option value="N.A">N.A</ion-option>
             </ion-select>
+          </ion-item>
+          <br>
+
+          <ion-item>
+            <ion-label position="floating">Profissão</ion-label>
+            <ion-input position="floating" type="text" placeholder="" formControlName="profissao"></ion-input>
+          </ion-item>
+          <br>
+          <ion-item>
+            <ion-label position="floating">Salário</ion-label>
+            <ion-input position="floating" type="number" placeholder="" formControlName="salario"></ion-input>
           </ion-item>
           <br>
           <ion-item>
@@ -254,6 +261,8 @@
             </ion-select>
           </ion-item>
           <br>
+        </ion-slide>
+        <ion-slide>
           <h4>História Patológica</h4>
           <ion-item>
             <ion-label>Tipo</ion-label>
@@ -264,9 +273,6 @@
               <ion-option value="Câncer">Câncer </ion-option>
             </ion-select>
           </ion-item>
-          <br>
-        </ion-slide>
-        <ion-slide>
           <br>
           <h4>Hábitos</h4>
           <ion-list radio-group style="margin-bottom:10px;" formControlName="alcool">
@@ -324,8 +330,6 @@
           </ion-list>
         </ion-slide>
         <ion-slide>
-          <br>
-          <br>
           <h4>Atividade Física...</h4>
           <ion-list radio-group style="margin-bottom:10px;" formControlName="exercicio">
             <ion-grid>
