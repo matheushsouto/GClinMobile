@@ -4,6 +4,8 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { NavController, AlertController } from 'ionic-angular';
+import { ViewChild } from '@angular/core';
+import { Slides } from 'ionic-angular';
 
 
 
@@ -13,9 +15,11 @@ import { NavController, AlertController } from 'ionic-angular';
  * See https://angular.io/api/core/Component for more info on Angular
  * Components.
  */
+
 @Component({
   selector: 'contato-form',
-  templateUrl: 'contato-form.html'
+  templateUrl: 'contato-form.html',
+
 })
 export class ContatoFormComponent {
 
@@ -29,6 +33,7 @@ export class ContatoFormComponent {
     public alertCtrl: AlertController,
   ) {
     this.contatoForm = this.formbuilder.group({
+      exercicio: [null, [Validators.required]],
       nome: [null, [Validators.required, Validators.minLength(5)]],
       idade: [null, [Validators.required]],
       sexo: [null, [Validators.required, Validators.minLength(5)]],
@@ -39,21 +44,20 @@ export class ContatoFormComponent {
       quemmora: [null, [Validators.required]],
       qtdpessoas: [null, [Validators.required]],
       moradia: [null, [Validators.required]],
-      agua: [],
-      luz: [],
-      esgoto: [],
-      pavimento: [],
-      lixo: [],
+      agua: [null, [Validators.required]],
+      luz: [null, [Validators.required]],
+      esgoto: [null, [Validators.required]],
+      pavimento: [null, [Validators.required]],
+      lixo: [null, [Validators.required]],
       escolaridade: [null, [Validators.required, Validators.minLength(5)]],
       situacaoprofissional: [null, [Validators.required, Validators.minLength(5)]],
       beneficio: [null, [Validators.required]],
       historiapatologica: [null, [Validators.required]],
-      alcool: [],
-      cigarro: [],
+      alcool: [null, [Validators.required]],
+      cigarro: [null, [Validators.required]],
       medicamentos: [null, [Validators.required, Validators.minLength(5)]],
       sugestaoencaminhamento: [null, [Validators.required]],
       motivoencaminhamento: [null, [Validators.required, Validators.minLength(5)]],
-
 
     })
   }
@@ -78,4 +82,5 @@ export class ContatoFormComponent {
     });
     alert.present();
   }
+
 }

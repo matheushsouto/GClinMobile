@@ -307,7 +307,6 @@
                     <ion-radio value="Sim"></ion-radio>
                   </ion-item>
                 </ion-col>
-
                 <ion-col width-50>
                   <ion-item>
                     <ion-label>Não</ion-label>
@@ -321,23 +320,48 @@
               <ion-label position="floating"></ion-label>
               <ion-textarea formControlName="medicamentos"></ion-textarea>
             </ion-item>
-            <h4>Sugestão de encaminhamento</h4>
-            <ion-item>
-              <ion-label>Area</ion-label>
-              <ion-select formControlName="sugestaoencaminhamento">
-                <ion-option value="Enfermagem">Enfermagem</ion-option>
-                <ion-option value="Odontologia">Odontologia</ion-option>
-                <ion-option value="Farmácia">Farmácia</ion-option>
-                <ion-option value="Psicologia">Psicologia</ion-option>
-                <ion-option value="Fisioterapia">Fisioterapia</ion-option>
-                <ion-option value="Serviço Social">Serviço Social</ion-option>
-              </ion-select>
-            </ion-item>
             <br>
           </ion-list>
         </ion-slide>
         <ion-slide>
           <br>
+          <br>
+          <h4>Atividade Física...</h4>
+          <ion-list radio-group style="margin-bottom:10px;" formControlName="exercicio">
+            <ion-grid>
+              <ion-row>
+                <ion-col width-50>
+                  <ion-item>
+                    <ion-label>Esporte:</ion-label>
+                  </ion-item>
+                </ion-col>
+                <ion-col width-50>
+                  <ion-item>
+                    <ion-label>Sim</ion-label>
+                    <ion-radio value="Sim"></ion-radio>
+                  </ion-item>
+                </ion-col>
+                <ion-col width-50>
+                  <ion-item>
+                    <ion-label>Não</ion-label>
+                    <ion-radio value="Não"></ion-radio>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-list>
+          <h4>Sugestão de encaminhamento</h4>
+          <ion-item>
+            <ion-label>Area</ion-label>
+            <ion-select formControlName="sugestaoencaminhamento">
+              <ion-option value="Enfermagem">Enfermagem</ion-option>
+              <ion-option value="Odontologia">Odontologia</ion-option>
+              <ion-option value="Farmácia">Farmácia</ion-option>
+              <ion-option value="Psicologia">Psicologia</ion-option>
+              <ion-option value="Fisioterapia">Fisioterapia</ion-option>
+              <ion-option value="Serviço Social">Serviço Social</ion-option>
+            </ion-select>
+          </ion-item>
           <ion-label>Motivo do encaminhamento:</ion-label>
           <ion-item>
             <ion-textarea maxLength="500" formControlName="motivoencaminhamento"></ion-textarea>
