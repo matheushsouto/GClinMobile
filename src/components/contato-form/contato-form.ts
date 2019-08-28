@@ -26,6 +26,7 @@ export class ContatoFormComponent {
 
   uid: string;
   contatoForm: FormGroup;
+  today = new Date().toISOString();
 
   constructor(
     public formbuilder: FormBuilder,
@@ -64,16 +65,12 @@ export class ContatoFormComponent {
       medicamentos: [null, [Validators.required, Validators.minLength(5)]],
       sugestaoencaminhamento: [null, [Validators.required]],
       motivoencaminhamento: [null, [Validators.required, Validators.minLength(5)]],
-
+      data: [null, [Validators.required]],
     })
   }
 
 
   cadastraContato() {
-    this.storage.get('user')
-      .then((resolve) => {
-        this.uid = resolve;
-      })
     this.db.database.ref('/paciente').push(this.contatoForm.value)
       .then(() => {
 

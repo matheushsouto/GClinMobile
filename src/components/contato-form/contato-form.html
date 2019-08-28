@@ -35,8 +35,6 @@
             </ion-input>
           </ion-item>
           <br>
-          <br>
-          <br>
         </ion-slide>
         <ion-slide>
           <h4>Agendamento para...</h4>
@@ -212,7 +210,6 @@
             </ion-grid>
           </ion-list>
           <br>
-          <br>
         </ion-slide>
         <ion-slide>
           <h4>Escolaridade</h4>
@@ -370,9 +367,13 @@
           <ion-item>
             <ion-textarea maxLength="500" formControlName="motivoencaminhamento"></ion-textarea>
           </ion-item>
-          <br><br>
+          <h4>Data do Cadastro</h4>
+          <ion-item>
+            <ion-label>Data do Cadastro</ion-label>
+            <ion-datetime displayFormat="D/M/YYYY" pickerFormat="DD/MM/YYYY" placeholder="DD/MM/YYYY"
+              formControlName="data"></ion-datetime>
+          </ion-item>
           <button type="submit" ion-button block [disabled]="contatoForm.invalid">Salvar</button>
-          <br>
           <br>
           <br>
         </ion-slide>
