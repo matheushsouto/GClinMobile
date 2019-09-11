@@ -1,3 +1,4 @@
+import { AngularFireAuth } from '@angular/fire/auth';
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Http } from '@angular/http';
@@ -35,7 +36,10 @@ export class ContatoFormComponent {
     public navCtrl: NavController,
     public alertCtrl: AlertController,
     public storage: Storage,
+    public afAuth: AngularFireAuth
   ) {
+    this.uid = this.afAuth.auth.currentUser.uid;
+    console.log(this.uid);
 
     this.contatoForm = this.formbuilder.group({
       exercicio: [null, [Validators.required]],
@@ -66,6 +70,7 @@ export class ContatoFormComponent {
       sugestaoencaminhamento: [null, [Validators.required]],
       motivoencaminhamento: [null, [Validators.required, Validators.minLength(5)]],
       data: [null, [Validators.required]],
+      uid: [this.uid]
     })
   }
 

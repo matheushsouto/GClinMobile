@@ -1,21 +1,19 @@
 <!-- -->
-<ion-content padding class="animated fadeIn login auth-page">
+<ion-content padding class="animated fadeIn login auth-page" class="bg_login">
   <div class="login-content">
 
     <!-- Logo -->
     <div padding-horizontal text-center class="animated fadeInDown">
       <div class="logo"></div>
       <h2 ion-text class="text-primary">
-        <strong>Bem vindo ao GClin </strong>
-
-        <h6>Prontuário Eletrônico</h6>
+        <ion-row>
+          <ion-col>
+            <img src="../../assets/imgs/bg_logo.png" width="235px" height="95px">
+          </ion-col>
+        </ion-row>
+        <strong>Bem vindo</strong>
       </h2>
-      <h1 text-center>
-        <ion-icon name="done-all" color="primary" class="icon-7em"></ion-icon>
-      </h1>
     </div>
-
-    <!-- Login form -->
     <form class="list-form" [formGroup]="loginForm" (ngSubmit)="submitLogin()">
       <ion-item>
         <ion-label floating>
@@ -37,7 +35,8 @@
       <br>
       <br><br><br>
       <div>
-        <button ion-button icon-start block color="dark" type="submit" ion-button [disabled]="loginForm.invalid">
+        <button ion-button round icon-start block class="btnLogin" type="submit" ion-button
+          [disabled]="loginForm.invalid">
           <ion-icon name="log-in"></ion-icon>
           Fazer Login
         </button>

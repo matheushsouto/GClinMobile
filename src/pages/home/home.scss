@@ -3,6 +3,28 @@ page-home {
     padding-top: 5em;
     padding-bottom: 2.5em;
     font-size: 35px;
+
   }
-  background-color: #677ddd;
+  .content_novo{
+
+   // background-image: url('../../assets/imgs/bg_home.png');
+    align-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+  }
+  .container-buttons{
+   text-align: center;
+  }
+  .btnLogin{
+    background-color: #F68121;
+  }
+  .bg_logo{
+    position:relative;
+    top:50%;
+    left:50%;
+    margin-top:-140px;
+    margin-left:-140px;
+  }
 }

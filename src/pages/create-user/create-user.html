@@ -4,17 +4,15 @@
     <!-- Logo -->
     <div padding-horizontal text-center class="animated fadeInDown">
       <div class="logo"></div>
-      <h2 ion-text class="text-primary">
-        <strong>Inscreva-se </strong>
-      </h2>
-      <h1 text-center>
-        <ion-icon name="done-all" color="primary" class="icon-7em"></ion-icon>
-      </h1>
+
+      <ion-row>
+        <ion-col>
+          <img src="../../assets/imgs/bg_logo.png" width="235px" height="95px">
+        </ion-col>
+      </ion-row>
+
     </div>
-
-    <!-- Login form -->
     <form class="list-form" novalidate [formGroup]="registerForm" (ngSubmit)="submitForm()">
-
       <ion-item>
         <ion-label floating>
           <ion-icon name="md-contact" item-start class="text-primary"></ion-icon>
@@ -48,7 +46,8 @@
       </ion-item>
       <br>
       <div>
-        <button ion-button icon-start block color="dark" type="submit" ion-button [disabled]="registerForm.invalid">
+        <button ion-button round icon-start block color="dark" type="submit" ion-button
+          [disabled]="registerForm.invalid">
           <ion-icon name="sign-in"></ion-icon>
           Criar Conta
         </button>

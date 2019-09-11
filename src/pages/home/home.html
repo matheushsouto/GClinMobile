@@ -1,8 +1,13 @@
-<ion-content padding>
-  <h1 class="custom-title">GClin - Prontuario Eletrônico</h1>
+<ion-content padding class="content_novo">
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <ion-row>
+    <ion-col>
+      <img src="../../assets/imgs/bg_logo.png" width="280px" height="150px" class="bg_logo">
+    </ion-col>
+  </ion-row>
+  <br><br><br><br>
   <div class="container-buttons">
-    <button ion-button outline [navPush]="'create-user'">Criar conta</button>
-    <button ion-button outline [navPush]="'login'">Fazer login</button>
-
+    <button ion-button round [navPush]="'create-user'">Criar conta</button>
+    <button ion-button round [navPush]="'login'" class="btnLogin">Fazer Login</button>
   </div>
 </ion-content>

@@ -22,7 +22,7 @@ import { AlertController } from 'ionic-angular';
 })
 export class CreateUserPage {
   registerForm: FormGroup;
-
+  uid: any;
 
   constructor(
     public navCtrl: NavController,
@@ -30,7 +30,9 @@ export class CreateUserPage {
     public formbuilder: FormBuilder,
     public alertCtrl: AlertController,
     public afAuth: AngularFireAuth
+
   ) {
+
     this.registerForm = this.formbuilder.group({
       name: [null, [Validators.required, Validators.minLength(5)]],
       email: [null, [Validators.required, Validators.email]],
