@@ -34,6 +34,22 @@ export class ContatoFormComponent {
   sexo: AbstractControl;
   posto: AbstractControl;
   diagnostico: AbstractControl;
+  area: AbstractControl;
+  estadocivil: AbstractControl;
+  quemmora: AbstractControl;
+  qtdpessoas: AbstractControl;
+  moradia: AbstractControl;
+  escolaridade: AbstractControl;
+  situacaoprofissional: AbstractControl;
+  profissao: AbstractControl;
+  salario: AbstractControl;
+  beneficio: AbstractControl;
+  historiapatologica: AbstractControl;
+  medicamentos: AbstractControl;
+  sugestaoencaminhamento: AbstractControl;
+  motivoencaminhamento: AbstractControl;
+  data: AbstractControl;
+
 
   constructor(
     public formbuilder: FormBuilder,
@@ -83,6 +99,22 @@ export class ContatoFormComponent {
     this.sexo = this.contatoForm.controls["sexo"];
     this.posto = this.contatoForm.controls["posto"];
     this.diagnostico = this.contatoForm.controls["diagnostico"];
+    this.area = this.contatoForm.controls["area"];
+    this.estadocivil = this.contatoForm.controls["estadocivil"];
+    this.quemmora = this.contatoForm.controls["quemmora"];
+    this.qtdpessoas = this.contatoForm.controls["qtdpessoas"];
+    this.moradia = this.contatoForm.controls["moradia"];
+    this.escolaridade = this.contatoForm.controls["escolaridade"];
+    this.situacaoprofissional = this.contatoForm.controls["situacaoprofissional"];
+    this.profissao = this.contatoForm.controls["profissao"];
+    this.salario = this.contatoForm.controls["salario"];
+    this.beneficio = this.contatoForm.controls["beneficio"];
+    this.historiapatologica = this.contatoForm.controls["historiapatologica"];
+    this.medicamentos = this.contatoForm.controls["medicamentos"];
+    this.sugestaoencaminhamento = this.contatoForm.controls["sugestaoencaminhamento"];
+    this.motivoencaminhamento = this.contatoForm.controls["motivoencaminhamento"];
+    this.data = this.contatoForm.controls["data"];
+
   }
 
 
