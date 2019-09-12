@@ -1,6 +1,6 @@
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { AngularFireDatabase } from '@angular/fire/database';
@@ -28,6 +28,12 @@ export class ContatoFormComponent {
   uid: string;
   contatoForm: FormGroup;
   today = new Date().toISOString();
+
+  nome: AbstractControl;
+  idade: AbstractControl;
+  sexo: AbstractControl;
+  posto: AbstractControl;
+  diagnostico: AbstractControl;
 
   constructor(
     public formbuilder: FormBuilder,
@@ -72,6 +78,11 @@ export class ContatoFormComponent {
       data: [null, [Validators.required]],
       uid: [this.uid]
     })
+    this.nome = this.contatoForm.controls["nome"];
+    this.idade = this.contatoForm.controls["idade"];
+    this.sexo = this.contatoForm.controls["sexo"];
+    this.posto = this.contatoForm.controls["posto"];
+    this.diagnostico = this.contatoForm.controls["diagnostico"];
   }
 
 

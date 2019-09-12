@@ -8,11 +8,18 @@
             <ion-label position="floating">Nome</ion-label>
             <ion-input position="floating" type="text" placeholder="" formControlName="nome"></ion-input>
           </ion-item>
+          <small *ngIf="nome.hasError('required') && nome.touched" ion-text color="danger">
+            * Campo Nome é Obrigatório
+          </small>
           <br>
           <ion-item>
             <ion-label position="floating">Idade</ion-label>
             <ion-input position="floating" type="number" placeholder="" formControlName="idade"></ion-input>
           </ion-item>
+          <small *ngIf="idade.hasError('required') && idade.touched" ion-text color="danger">
+            * Campo Idade é Obrigatório
+          </small>
+
           <br>
           <ion-item>
             <ion-label position="floating"> Sexo</ion-label>
@@ -28,12 +35,18 @@
             <ion-label position="floating">Posto de Sáude</ion-label>
             <ion-input type="text" placeholder="" formControlName="posto"></ion-input>
           </ion-item>
+          <small *ngIf="posto.hasError('required') && posto.touched" ion-text color="danger">
+            * Campo Posto é Obrigatório
+          </small>
           <br>
           <ion-item>
             <ion-label position="floating">Diagnóstico Clinico</ion-label>
             <ion-input type="text" placeholder="" formControlName="diagnostico">
             </ion-input>
           </ion-item>
+          <small *ngIf="diagnostico.hasError('required') && diagnostico.touched" ion-text color="danger">
+            * Campo Diagnostico é Obrigatório
+          </small>
           <br>
         </ion-slide>
         <ion-slide>
