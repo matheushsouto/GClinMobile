@@ -60,6 +60,7 @@ export class ContatoFormComponent {
     public storage: Storage,
     public afAuth: AngularFireAuth
   ) {
+
     this.uid = this.afAuth.auth.currentUser.uid;
     console.log(this.uid);
 

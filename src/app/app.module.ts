@@ -1,3 +1,4 @@
+import { LoginPage } from './../pages/login/login';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -7,7 +8,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { HttpModule } from '@angular/http';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
 
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environments';
@@ -23,7 +23,7 @@ import { ComponentsModule } from '../components/components.module';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
+    LoginPage,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +36,7 @@ import { ComponentsModule } from '../components/components.module';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    LoginPage,
   ],
   providers: [
     StatusBar,

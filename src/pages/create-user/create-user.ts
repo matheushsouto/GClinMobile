@@ -51,11 +51,16 @@ export class CreateUserPage {
       )
       .then(response => {
         this.presentAlert('Usuario Cadastrado', 'Usuario Cadastrado com Sucesso');
-        this.navCtrl.setRoot('start-page');
       })
       .catch(error => {
         if (error.code == 'auth/email-already-in-use') {
           this.presentAlert('ERRO', 'O email já está sendo utilizado!');
+        }
+        if (error.code == 'auth/invalid-email') {
+          this.presentAlert('Erro', 'Seu email é invalido');
+        }
+        if (error.code == 'auth/operation-not-allowed') {
+          this.presentAlert('Erro', 'Caramba ce é o bixão memo');
         }
       });
   }

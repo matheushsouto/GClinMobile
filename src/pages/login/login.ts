@@ -53,6 +53,11 @@ export class LoginPage {
           this.presentAlert('Erro', 'Senha incorreta, digite novamente.');
           this.loginForm.controls['password'].setValue(null);
         }
+        if (error.code == 'auth/user-not-found') {
+          this.presentAlert('Erro', 'A conta não existe!')
+          this.loginForm.controls['email'].setValue(null);
+          this.loginForm.controls['password'].setValue(null);
+        }
       });
   }
 

@@ -8,8 +8,10 @@
 </ion-header>
 
 <ion-content padding>
-  <button ion-button outline [navPush]="'cadastro-page'">Cadastrar Paciente</button>
-
+  <button ion-button ion-button round [navPush]="'cadastro-page'">Cadastrar Paciente</button>
+  <button *ngIf="aux == 'FnMEdC4WT5SpfIVepXsjgA4Nh3g1'" ion-button ion-button round [navPush]="'create-user'">Cadastrar
+    Usuario
+  </button>
 
 
 </ion-content>
