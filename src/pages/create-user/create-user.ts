@@ -51,13 +51,25 @@ export class CreateUserPage {
       )
       .then(response => {
         this.presentAlert('Usuario Cadastrado', 'Usuario Cadastrado com Sucesso');
+        this.registerForm.controls['name'].setValue(null);
+        this.registerForm.controls['email'].setValue(null);
+        this.registerForm.controls['password'].setValue(null);
+        this.registerForm.controls['confirmPassword'].setValue(null);
       })
       .catch(error => {
         if (error.code == 'auth/email-already-in-use') {
           this.presentAlert('ERRO', 'O email já está sendo utilizado!');
+          this.registerForm.controls['name'].setValue(null);
+          this.registerForm.controls['email'].setValue(null);
+          this.registerForm.controls['password'].setValue(null);
+          this.registerForm.controls['confirmPassword'].setValue(null);
         }
         if (error.code == 'auth/invalid-email') {
           this.presentAlert('Erro', 'Seu email é invalido');
+          this.registerForm.controls['name'].setValue(null),
+          this.registerForm.controls['email'].setValue(null),
+          this.registerForm.controls['password'].setValue(null),
+          this.registerForm.controls['confirmPassword'].setValue(null);
         }
         if (error.code == 'auth/operation-not-allowed') {
           this.presentAlert('Erro', 'Operação Cancelada, tente novamente');
