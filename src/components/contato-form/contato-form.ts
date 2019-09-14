@@ -5,8 +5,6 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { NavController, AlertController } from 'ionic-angular';
-import { ViewChild } from '@angular/core';
-import { Slides } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 
 
@@ -124,6 +122,7 @@ export class ContatoFormComponent {
       .then(() => {
 
         this.navCtrl.setRoot('start-page');
+        console.log(this.contatoForm);
         this.presentAlert('', 'Dados inseridos com sucesso!');
         console.log(this.contatoForm);
         this.contatoForm.reset();

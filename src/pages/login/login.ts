@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { AngularFireAuth } from '@angular/fire/auth';
 
 import { AlertController } from 'ionic-angular';
@@ -22,6 +22,7 @@ import { Storage } from '@ionic/storage';
 })
 export class LoginPage {
   loginForm: FormGroup;
+  email: AbstractControl;
 
   constructor(
     public navCtrl: NavController,
@@ -35,6 +36,7 @@ export class LoginPage {
       email: [null, [Validators.required, Validators.email]],
       password: [null, [Validators.required, Validators.minLength(6)]]
     });
+    this.email = this.loginForm.controls["email"];
   }
 
   submitLogin() {
@@ -50,11 +52,11 @@ export class LoginPage {
       })
       .catch(error => {
         if (error.code == 'auth/wrong-password') {
-          this.presentAlert('Erro', 'Senha incorreta, digite novamente.');
+          this.presentAlert('', 'Senha incorreta, digite novamente.');
           this.loginForm.controls['password'].setValue(null);
         }
         if (error.code == 'auth/user-not-found') {
-          this.presentAlert('Erro', 'A conta não existe!')
+          this.presentAlert('', 'Não é possível encontrar a conta');
           this.loginForm.controls['email'].setValue(null);
           this.loginForm.controls['password'].setValue(null);
         }

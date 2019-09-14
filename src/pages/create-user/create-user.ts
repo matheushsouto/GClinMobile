@@ -60,7 +60,7 @@ export class CreateUserPage {
           this.presentAlert('Erro', 'Seu email é invalido');
         }
         if (error.code == 'auth/operation-not-allowed') {
-          this.presentAlert('Erro', 'Caramba ce é o bixão memo');
+          this.presentAlert('Erro', 'Operação Cancelada, tente novamente');
         }
       });
   }
