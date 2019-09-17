@@ -1,0 +1,18 @@
+page-about {
+  ion-list {
+    border-radius: 5px;
+    background: color($colors, lighter);
+
+    .item {
+      background: transparent;
+    }
+  }
+
+  ion-label {
+    font-weight: 500;
+  }
+
+  img {
+    width: 100%;
+  }
+}

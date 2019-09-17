@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Alert } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ValidateConfirmPassword } from '../../validators/confirmPassword';
 
@@ -67,9 +67,9 @@ export class CreateUserPage {
         if (error.code == 'auth/invalid-email') {
           this.presentAlert('Erro', 'Seu email é invalido');
           this.registerForm.controls['name'].setValue(null),
-          this.registerForm.controls['email'].setValue(null),
-          this.registerForm.controls['password'].setValue(null),
-          this.registerForm.controls['confirmPassword'].setValue(null);
+            this.registerForm.controls['email'].setValue(null),
+            this.registerForm.controls['password'].setValue(null),
+            this.registerForm.controls['confirmPassword'].setValue(null);
         }
         if (error.code == 'auth/operation-not-allowed') {
           this.presentAlert('Erro', 'Operação Cancelada, tente novamente');
