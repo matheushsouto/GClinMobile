@@ -1,14 +1,34 @@
 <ion-header>
+
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
+    <ion-buttons left>
+      <button ion-button icon-only>
+        <ion-icon name='school'></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Clínicas Guairacá</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <button [navPush]="'cadastro-page'" class="paciente"></button>
-  <button *ngIf="aux == 'Qs4UFlutmOfgzrSSo2M9RxFIaBv2'" round [navPush]="'create-user'" class="usuario"></button>
-  <button class="prontuario" class="prontuario" [navPush]="'evolucao-page'"></button>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div>
+          <button [navPush]="'cadastro-page'" class="paciente"></button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <button *ngIf="aux == 'Qs4UFlutmOfgzrSSo2M9RxFIaBv2'" round [navPush]="'create-user'"
+            class="usuario"></button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <button class="prontuario" class="prontuario" [navPush]="'evolucao-page'"></button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

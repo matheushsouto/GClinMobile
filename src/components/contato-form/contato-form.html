@@ -3,7 +3,7 @@
     <ion-list>
       <ion-slides pager>
         <br><br>
-        <ion-slide>
+        <ion-slide class='slide1'>
           <h4>Identificação do Paciente</h4>
           <ion-item>
             <ion-label position="floating">Nome</ion-label>
@@ -51,7 +51,6 @@
           <small *ngIf="diagnostico.hasError('required') && diagnostico.touched" ion-text color="danger">
             * Campo Diagnóstico é Obrigatório
           </small>
-
           <br>
         </ion-slide>
         <ion-slide>

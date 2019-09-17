@@ -4,7 +4,7 @@ import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/fo
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { AngularFireDatabase } from '@angular/fire/database';
-import { NavController, AlertController } from 'ionic-angular';
+import { NavController, AlertController, Slides } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 
 
@@ -22,7 +22,6 @@ import { Storage } from '@ionic/storage';
 
 })
 export class ContatoFormComponent {
-
   uid: string;
   contatoForm: FormGroup;
   today = new Date().toISOString();
@@ -47,6 +46,8 @@ export class ContatoFormComponent {
   sugestaoencaminhamento: AbstractControl;
   motivoencaminhamento: AbstractControl;
   data: AbstractControl;
+
+
 
 
   constructor(
@@ -137,6 +138,7 @@ export class ContatoFormComponent {
     });
     alert.present();
   }
+
 
 
 }

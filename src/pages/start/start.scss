@@ -1,12 +1,25 @@
 page-start {
+  color: aliceblue;
   .button-add {
     margin-top: 30px;
+    align-items: center;
 
+  }
+
+
+  .bg {
+    width: 100%;
+    height: 100%;
+    opacity: .6;
+    position: fixed;
+    //box-shadow: inset 0 -2px 5px rgba(201, 107, 19, 0.2);
+    transition: .2s;
   }
   .paciente{
     background-image: url('../../assets/imgs/paciente.png') ;
     width: 100px;
     height: 100px;
+    text-align: center;
   }
   .paciente{
     background-image: url('../../assets/imgs/paciente.png') ;
