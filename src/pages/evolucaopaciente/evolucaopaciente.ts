@@ -32,7 +32,7 @@ export class EvolucaopacientePage {
   }
 
   pegarDadosFirebase() {
-    this.http.get('https://fir-login-8f2fd.firebaseio.com/paciente')
+    this.http.get('https://fir-login-8f2fd.firebaseio.com/paciente.json')
       .map(res => res.json())
       .subscribe(data => {
         if (data !== null && data !== undefined) {
