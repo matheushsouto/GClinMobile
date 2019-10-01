@@ -1,9 +1,9 @@
+import { EvolucaopacientePage } from './../evolucaopaciente/evolucaopaciente';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { Http } from '@angular/http';
 import { Component } from '@angular/core';
-import { IonicPage } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 import { AngularFireAuth } from '@angular/fire/auth';
-
 /**
  * Generated class for the StartPage page.
  *
@@ -26,10 +26,13 @@ export class StartPage {
   list;
   auxlist;
 
+
   constructor(
     public afAuth: AngularFireAuth,
     public http: Http,
-    public db: AngularFireDatabase
+    public db: AngularFireDatabase,
+    public navCtrl: NavController,
+
 
   ) {
     this.getList();
@@ -52,11 +55,12 @@ export class StartPage {
       const items = snapshot.val();
       if (items) {
         this.list = Object.keys(items).map(i => items[i]);
-        console.log(items);
       }
     })
   }
-
-
+  openEvolution(nome: string) {
+    this.navCtrl.push(EvolucaopacientePage, {
+      pacients: nome
+    });
+  }
 }
-

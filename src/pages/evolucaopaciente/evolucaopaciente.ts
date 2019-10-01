@@ -10,20 +10,25 @@ import { Http } from '@angular/http';
  */
 
 @IonicPage({
-  name: 'evolucao-page'
-})
+  name: 'evolucaopaciente'
+}
+)
 @Component({
   selector: 'page-evolucaopaciente',
   templateUrl: 'evolucaopaciente.html',
 })
 export class EvolucaopacientePage {
   pacientesDb;
+  nome;
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     public http: Http,
+
   ) {
+    this.nome = navParams.get('nome');
+    console.log(this.nome);
     this.pacientesDb = [];
   }
 

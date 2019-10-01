@@ -1,5 +1,4 @@
 <ion-header no-lines>
-
   <ion-navbar>
     <ion-buttons left>
       <button ion-button icon-only>
@@ -15,7 +14,6 @@
     </ion-buttons>
   </ion-navbar>
 </ion-header>
-
 <ion-content padding>
   <ion-grid>
     <ion-row>
@@ -30,17 +28,14 @@
             class="usuario"></button>
         </div>
       </ion-col>
-      <ion-col>
-        <div>
-          <button class="prontuario" class="prontuario" [navPush]="'evolucao-page'"></button>
-        </div>
-      </ion-col>
     </ion-row>
   </ion-grid>
-  <h4>Meus pacientes:</h4>
-  <ion-list *ngFor="let item of list">
-    <ion-item>
-      <ion-label>{{ item.nome }}</ion-label>
-    </ion-item>
-  </ion-list>
+  <ion-content padding>
+    <h4 color="primary">Meus Pacientes:</h4>
+    <ion-list no-lines padding-bottom margin-top *ngFor="let item of list">
+      <button (click)="openEvolution(item)" detail-none>
+        <ion-item color='primary'>{{ item.nome }}</ion-item>
+      </button>
+    </ion-list>
+  </ion-content>
 </ion-content>

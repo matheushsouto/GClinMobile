@@ -36,4 +36,12 @@ page-start {
     width: 100px;
     height: 100px;
   }
+  ion-list {
+    border-radius: 5px;
+    background: color($colors, lighter);
+
+    .item {
+      background: transparent;
+    }
+  }
 }

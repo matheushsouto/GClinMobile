@@ -118,10 +118,9 @@ export class ContatoFormComponent {
   }
 
 
-  cadastraContato() {
+  registerContact() {
     this.db.database.ref('/paciente').push(this.contatoForm.value)
       .then(() => {
-
         this.navCtrl.setRoot('start-page');
         console.log(this.contatoForm);
         this.presentAlert('', 'Dados inseridos com sucesso!');
@@ -138,7 +137,4 @@ export class ContatoFormComponent {
     });
     alert.present();
   }
-
-
-
 }

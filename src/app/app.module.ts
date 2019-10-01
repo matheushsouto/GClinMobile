@@ -1,3 +1,4 @@
+import { EvolucaopacientePage } from './../pages/evolucaopaciente/evolucaopaciente';
 import { LoginPage } from './../pages/login/login';
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -24,6 +25,7 @@ import { ComponentsModule } from '../components/components.module';
   declarations: [
     MyApp,
     LoginPage,
+    EvolucaopacientePage,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +39,7 @@ import { ComponentsModule } from '../components/components.module';
   entryComponents: [
     MyApp,
     LoginPage,
+    EvolucaopacientePage
   ],
   providers: [
     StatusBar,

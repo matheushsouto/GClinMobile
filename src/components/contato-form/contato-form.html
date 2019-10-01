@@ -1,5 +1,5 @@
 <div class="formulario">
-  <form novalidate [formGroup]="contatoForm" (ngSubmit)="cadastraContato()">
+  <form novalidate [formGroup]="contatoForm" (ngSubmit)="registerContact()">
     <ion-list>
       <ion-slides pager>
         <br><br>
@@ -21,7 +21,6 @@
           <small *ngIf="idade.hasError('required') && idade.touched" ion-text color="danger">
             * Campo Idade é Obrigatório
           </small>
-
           <br>
           <ion-item>
             <ion-label position="floating"> Sexo</ion-label>
@@ -87,7 +86,6 @@
           <small *ngIf="estadocivil.hasError('required') && estadocivil.touched" ion-text color="danger">
             * Campo Estado Civil é Obrigatório
           </small>
-
           <br>
           <ion-item>
             <ion-label> Com quem mora:</ion-label>
@@ -103,7 +101,6 @@
           <small *ngIf="quemmora.hasError('required') && quemmora.touched" ion-text color="danger">
             * Campo Quem mora é Obrigatório
           </small>
-
           <br>
           <ion-item>
             <ion-label position="floating">Quantas pessoas moram na casa?</ion-label>
@@ -113,7 +110,6 @@
           <small *ngIf="qtdpessoas.hasError('required') && qtdpessoas.touched" ion-text color="danger">
             * Campo Quantidade de Pessoas é Obrigatório
           </small>
-
           <br>
           <ion-item>
             <ion-label> Condições de Moradia</ion-label>
@@ -126,7 +122,6 @@
           <small *ngIf="moradia.hasError('required') && moradia.touched" ion-text color="danger">
             * Campo Moradia é Obrigatório
           </small>
-
           <br>
         </ion-slide>
         <ion-slide>
@@ -279,9 +274,7 @@
             color="danger">
             * Campo Situação Profissional é Obrigatório
           </small>
-
           <br>
-
           <ion-item>
             <ion-label position="floating">Profissão</ion-label>
             <ion-input position="floating" type="text" placeholder="" formControlName="profissao"></ion-input>
@@ -289,7 +282,6 @@
           <small *ngIf="profissao.hasError('required') && profissao.touched" ion-text color="danger">
             * Campo Profissão é Obrigatório
           </small>
-
           <br>
           <ion-item>
             <ion-label position="floating">Salário</ion-label>
@@ -313,7 +305,6 @@
           <small *ngIf="beneficio.hasError('required') && beneficio.touched" ion-text color="danger">
             * Campo Beneficio é Obrigatório
           </small>
-
           <br>
         </ion-slide>
         <ion-slide>
@@ -331,7 +322,6 @@
           <small *ngIf="historiapatologica.hasError('required') && historiapatologica.touched" ion-text color="danger">
             * Campo História Patológica é Obrigatório
           </small>
-
           <br>
           <h4>Hábitos</h4>
           <ion-list radio-group style="margin-bottom:10px;" formControlName="alcool">
@@ -388,7 +378,6 @@
             <small *ngIf="medicamentos.hasError('required') && medicamentos.touched" ion-text color="danger">
               * Campo Medicamentos é Obrigatório
             </small>
-
             <br>
           </ion-list>
         </ion-slide>
@@ -433,7 +422,6 @@
             color="danger">
             * Campo Sugestão de Encaminhamento é Obrigatório
           </small>
-
           <ion-label>Motivo do encaminhamento:</ion-label>
           <ion-item>
             <ion-textarea maxLength="500" formControlName="motivoencaminhamento"></ion-textarea>
@@ -442,7 +430,6 @@
             color="danger">
             * Campo Motivo do Encaminhamento é Obrigatório
           </small>
-
           <h4>Data do Cadastro</h4>
           <ion-item>
             <ion-label>Data do Cadastro</ion-label>
@@ -452,7 +439,6 @@
           <small *ngIf="data.hasError('required') && data.touched" ion-text color="danger">
             * Campo Data é Obrigatório
           </small>
-
           <button type="submit" ion-button block [disabled]="contatoForm.invalid">Salvar</button>
           <br>
           <br>

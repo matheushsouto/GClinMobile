@@ -1,5 +1,4 @@
 <ion-header>
-
   <ion-navbar>
     <ion-buttons left>
       <button ion-button icon-only>
@@ -11,17 +10,13 @@
 </ion-header>
 <ion-content padding class="animated fadeIn login auth-page">
   <div class="login-content">
-
-    <!-- Logo -->
     <div padding-horizontal text-center class="animated fadeInDown">
       <div class="logo"></div>
-
       <ion-row>
         <ion-col>
           <img src="../../assets/imgs/Logo-Clinica.png" width="235px" height="110px">
         </ion-col>
       </ion-row>
-
     </div>
     <form class="list-form" novalidate [formGroup]="registerForm" (ngSubmit)="submitForm()">
       <ion-item>
@@ -31,7 +26,6 @@
         </ion-label>
         <ion-input type="text" formControlName="name"></ion-input>
       </ion-item>
-
       <ion-item>
         <ion-label floating>
           <ion-icon name="mail" item-start class="text-primary"></ion-icon>
@@ -39,7 +33,6 @@
         </ion-label>
         <ion-input type="email" formControlName="email"></ion-input>
       </ion-item>
-
       <ion-item>
         <ion-label floating>
           <ion-icon name="lock" item-start class="text-primary"></ion-icon>
@@ -47,7 +40,6 @@
         </ion-label>
         <ion-input type="password" formControlName="password"></ion-input>
       </ion-item>
-
       <ion-item>
         <ion-label floating>
           <ion-icon name="lock" item-start class="text-primary"></ion-icon>
@@ -64,9 +56,5 @@
         </button>
       </div>
     </form>
-
-
-    <!-- Other links -->
-
   </div>
 </ion-content>

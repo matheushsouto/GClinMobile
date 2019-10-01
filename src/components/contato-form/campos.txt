@@ -1,9 +1,0 @@
- <ion-fab right bottom>
-        <button ion-fab [navPush]="'cadastro-page'">
-          <ion-icon name='add' color='lighter'></ion-icon>
-        </button>
-        <label>Cadastrar Paciente</label>
-      </ion-fab>
-      <button [navPush]="'cadastro-page'" class="paciente">Cadastrar Paciente</button>
-      <button *ngIf="aux == 'Qs4UFlutmOfgzrSSo2M9RxFIaBv2'" round [navPush]="'create-user'" class="usuario"></button>
-      <button class="prontuario" class="prontuario" [navPush]="'evolucao-page'"></button>
